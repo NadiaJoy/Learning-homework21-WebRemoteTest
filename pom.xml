@@ -27,6 +27,12 @@
             <version>2.13.1</version>
             <scope>test</scope>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/com.codeborne/selenide -->
+        <dependency>
+            <groupId>com.codeborne</groupId>
+            <artifactId>selenide</artifactId>
+            <version>6.13.0</version>
+        </dependency>
     </dependencies>
 
 
@@ -45,6 +51,7 @@
                         <allure.results.directory>${project.build.directory}/allure-results</allure.results.directory>
                               </systemPropertyVariables>
                 </configuration>
+
                 <dependencies>
                     <dependency>
                         <groupId>org.aspectj</groupId>
@@ -61,6 +68,15 @@
                 <!-- If you don't define report version the plugin will work, but may use the older one.-->
                 <configuration>
                     <reportVersion>2.13.1</reportVersion>
+                </configuration>
+            </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.8.0</version>
+                <configuration>
+                    <source>9</source>
+                    <target>9</target>
                 </configuration>
             </plugin>
         </plugins>
